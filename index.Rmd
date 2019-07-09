@@ -1,0 +1,14 @@
+---
+title: "med-bioinfo"
+author: ["Tamas Kiss, MD"]
+description: ""
+url: ""
+github-repo: "TamasKiss26/med-bioinfo"
+date: "7/8/2019"
+output: html_document
+---
+
+#Welcome
+
+##License
+Open liscence
