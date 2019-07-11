@@ -4,5 +4,9 @@
 - https://www.r-bloggers.com - r bloog repository
 
 
-## Good writings
+## Good writings:
 - https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/ -tidyvers, no standard evaluation
+
+
+## Cheatsheets:
+- https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf - R markdown
