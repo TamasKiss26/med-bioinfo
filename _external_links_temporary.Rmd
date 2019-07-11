@@ -1,0 +1,8 @@
+# External links
+
+## Main sources:
+- https://www.r-bloggers.com - r bloog repository
+
+
+## Good writings
+- https://www.statworx.com/de/blog/bang-bang-how-to-program-with-dplyr/ -tidyvers, no standard evaluation
