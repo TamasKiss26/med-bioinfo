@@ -1,5 +1,7 @@
 # Intro
 
+## Why bioinformatics?
+
 ## About the book
 
 ## About the authors
