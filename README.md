@@ -3,7 +3,7 @@ bioinformatics teaching materials for medical students
 
 ## pillars: 
 1. coding skills
-2. staistical, mathematical and computational methodes
+2. statistical, mathematical and computational methods
 3. storrytelling
 
 
@@ -12,7 +12,6 @@ bioinformatics teaching materials for medical students
 - introduction to BASH
 - introduction to Git and GitHub
 - tidyverse
-- ggplot2
 - annotation hub
 - eSet
 - accessing online databases
@@ -27,9 +26,10 @@ bioinformatics teaching materials for medical students
 - experimental designe
 - exploratory data analysis
 - reporting data
+- ggplot2 and its extensions
 
 
-## explored methodes:
+## experimental methods:
 - mRNA-seq
 - scRNA-seq
 - genome-seq
