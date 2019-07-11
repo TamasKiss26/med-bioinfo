@@ -1,0 +1,8 @@
+# R and Bioconductor
+
+- R project website: https://www.r-project.org
+- Bioconductor project website: https://bioconductor.org
+
+## R-studio IDE
+- link to the official website: https://www.rstudio.com
+- link to install: https://www.rstudio.com/products/rstudio/download/ 
