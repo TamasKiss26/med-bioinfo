@@ -1,0 +1,46 @@
+# Medical research in the 21st century
+
+```{r setup, include = FALSE}
+library(rentrez)
+```
+
+### Historicly: 
+couple of experimental datapoints, small literature
+
+## High-throughput technologies in biology
+- include a diagram of pubmed publication increase over time
+- different statistic neede to the new technologies 
+- nice image needed: how changed the data volume from pcr to pcr-array to microarray to mRNA-seq to scRNA-seq
+- central dogma: steps and omics
+
+
+## Introduction to some moder technologies:
+
+### 1. PCR and PCR-array
+- link to a nice, high impact paper from the recent couple of years: 
+
+### 2. microarray
+- link to a nice, high impact paper from the recent couple of years:
+
+### 3. mRNA-seq
+- link to a nice, high impact paper from the recent couple of years:
+
+### 4. scRNA-seq
+- link to a nice, high impact paper from the recent couple of years:
+
+### 5. genome sequencing
+- link to a nice, high impact paper from the recent couple of years:
+
+### 6. GWAS
+- link to a nice, high impact paper from the recent couple of years:
+
+### 7. text mining
+- link to a nice, high impact paper from the recent couple of years:
+
+### 8. proteomisc
+- link to a nice, high impact paper from the recent couple of years:
+
+### 9. lipidomics
+- link to a nice, high impact paper from the recent couple of years:
+
+
