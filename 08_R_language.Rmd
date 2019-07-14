@@ -1,0 +1,19 @@
+# R language
+
+### Assignement
+
+```{r}
+x <- 5
+y <- 10
+```
+
+```{r}
+x
+y
+```
+
+### Basic operations
+
+```{r}
+x + y
+```
