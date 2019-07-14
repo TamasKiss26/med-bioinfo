@@ -1,0 +1,63 @@
+# The Rectome Knowledgebase
+
+- https://reactome.org
+- opens source, open access, manually curated and peer-rewieved pathway database
+- founded: 2003
+- Lincoln Stein, Peter D’Eustachio, Henning Hermjakob, Guanming Wu
+- human only
+- contain: signal transduction, transport, DNA replication, protein synthesis, and intermediary metabolism
+- single consistant data model
+- can run in web browser form also!!
+- https://reactome.org/about/statistics -statistics
+- relased quarterly
+
+
+## Reactom on Bioconductor
+- bioconductor package: https://www.bioconductor.org/packages/release/bioc/html/ReactomePA.html
+- publication: https://www.ncbi.nlm.nih.gov/pubmed/26661513
+
+#### 1. Install package: 
+```{r, include = F}
+library(tidyverse)
+library(readxl)
+library(ReactomePA)
+library(biomaRt)
+```
+
+```{r, eval = F}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("ReactomePA")
+```
+
+#### 2. Read data:
+```{r}
+univ <- read_excel('./data/mRNA-seq_DE_table_two_sample_wt_vs_ko/all_genes.xlsx') %>% pull(ENSG)
+targ <- read_excel('./data/mRNA-seq_DE_table_two_sample_wt_vs_ko/de_genes.xlsx') %>% pull(ENSG)
+```
+
+#### 3. Inspect data:
+```{r}
+length(univ)
+univ[1: 6]
+length(targ)
+targ[1:6]
+```
+
+#### 4. Transltate Ensembl to Entrez by BioMart
+```{r}
+mart
+
+getBM(
+  attributes = c(
+    
+  ),
+  
+  mart = mart
+    
+  )
+)
+```
+
+
