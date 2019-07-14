@@ -1,0 +1,31 @@
+# mRNA-seq: from the FASTQ files to the DE table
+
+Standard workflow, how to perform your first mRNA-seq experimnet
+Let`s emphasize why we use these tools and not the others!
+-https://www.ncbi.nlm.nih.gov/pubmed/29267363 
+
+## FASTQ file quality test
+- ShortReads pakage: https://www.ncbi.nlm.nih.gov/pubmed/19654119
+
+## adapter trimming:
+- http://www.usadellab.org/cms/?page=trimmomatic -trimmomatic
+- https://www.ncbi.nlm.nih.gov/pubmed/24695404 -trimmomatic original paper
+- https://bioconductor.org/packages/release/bioc/html/FastqCleaner.html -bioconductor tool, maybe better than trimmomatic
+
+
+## kallisto:
+- https://www.youtube.com/watch?v=94wphB3GKBM -how to use, video
+- https://www.ncbi.nlm.nih.gov/assembly/GCF_000001635.20#/def -you need this to build the index
+- https://www.ncbi.nlm.nih.gov/pubmed/27043002 -pubmed
+
+
+## tximport package
+
+## DEseq2 pakage: 
+- https://www.ncbi.nlm.nih.gov/pubmed/25516281
+- https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8 -algorithm
+- https://liorpachter.wordpress.com/2017/08/02/how-not-to-perform-a-differential-expression-analysis-or-science/
+- interesting blog post: https://en.wikipedia.org/wiki/Negative_binomial_distribution -negative binomial distribution
+
+
+- https://www.ncbi.nlm.nih.gov/pubmed/29040385 alternative splicing workflow banchmarking MAYBE SOMEWHERE ELSE!!!
