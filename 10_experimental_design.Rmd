@@ -1,0 +1,60 @@
+# Experimental design:
+
+## General considerations:
+- randomization
+- avoid confounding factors
+
+
+#### Batch effect
+- http://www.molmine.com/magma/global_analysis/batch_effect.html
+- def: Batch effects are technical sources of variation that have been added to the samples during handling.
+- different experiment times, handlers, reagent lots, segregated running times etc.
+- https://www.ncbi.nlm.nih.gov/pubmed/28351613
+- batch effect - correction algorithms:
+  + simple linear models
+  + empirical Bayes
+  + factor-based analysis
+  + 
+
+```{r, warning = F, error = F}
+library(rentrez)
+
+search_year <- function(year, term){
+    query <- paste(term, "AND (", year, "[PDAT])")
+    entrez_search(db="pubmed", term=query, retmax=0)$count
+}
+
+year <- 2008:2019
+papers <- sapply(year, search_year, term="batch effect", USE.NAMES=FALSE)
+
+plot(year, papers, type='b', main="The Rise of Batch Effect")
+
+```
+
+- "One of the most important steps in designing an RNA sequencing experiment is selecting the optimal number of biological replicates to achieve a desired statistical power (sample size estimation), or estimating the likelihood of successfully finding the statistical significance in the dataset (power estimation). An insufficient number of replicates may lead to unreliable conclusions, whereas too many replicates may result in a waste of time and resources."
+
+## Domain specific:
+
+#### Microarry:
+- https://www.ncbi.nlm.nih.gov/pubmed/15618534
+
+
+#### mRNA-seq design:
+- Poisson distribution based methodes -> negative binominal distribution based methodes
+- number of replicates
+- depth of sequencing
+- budget
+- minimum: 3/group
+- sample size calculator
+  + RnaSeqSampleSize: Bioconductor package and a Shiny application: https://www.ncbi.nlm.nih.gov/pubmed/29843589 
+  + https://www.ncbi.nlm.nih.gov/pubmed/25374457
+  + https://www.ncbi.nlm.nih.gov/pubmed/23961961
+  + https://www.ncbi.nlm.nih.gov/pubmed/23314327
+- recommended sample sizes vary from tool to tool https://www.ncbi.nlm.nih.gov/pubmed/28100468
+- "Another issue with sample size calculators is that it might not be obvious how to precisely define the outcome: do we want to find as many DE genes as possible? Do we want a certain power for the lowly expressed genes or the highly expressed ones? In many cases, RNA­seq experiments are exploratory and thus a means to further experimentation."
+
+- "more than 80% of reads are attributed to the 10% most expressed genes"
+- compare multiple tools on big dataset: edgeR and DEseq2 is the best when we use smaller sample size (<12), but at big dample number DEseq is the best: https://www.ncbi.nlm.nih.gov/pubmed/27022035
+
+#### GWAS
+
