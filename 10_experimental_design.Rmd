@@ -14,9 +14,8 @@
   + simple linear models
   + empirical Bayes
   + factor-based analysis
-  + 
 
-```{r, warning = F, error = F}
+```{r collapse=TRUE}
 library(rentrez)
 
 search_year <- function(year, term){
@@ -45,8 +44,12 @@ plot(year, papers, type='b', main="The Rise of Batch Effect")
 - depth of sequencing
 - budget
 - minimum: 3/group
-- sample size calculator
-  + RnaSeqSampleSize: Bioconductor package and a Shiny application: https://www.ncbi.nlm.nih.gov/pubmed/29843589 
+- sample size calculator:
+
+|Name             | Link                                              | Description                                  |
+|:---------------:|:-------------------------------------------------:|:--------------------------------------------:|
+|RnaSeqSampleSize | https://www.ncbi.nlm.nih.gov/pubmed/29843589      | Bioconductor package and a Shiny application |
+
   + https://www.ncbi.nlm.nih.gov/pubmed/25374457
   + https://www.ncbi.nlm.nih.gov/pubmed/23961961
   + https://www.ncbi.nlm.nih.gov/pubmed/23314327
