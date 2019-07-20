@@ -1,0 +1,3 @@
+# Entrez database data mining
+
+- rentrez package: https://ropensci.org/tutorials/rentrez_tutorial/
