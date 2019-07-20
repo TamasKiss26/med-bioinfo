@@ -15,18 +15,25 @@
   + empirical Bayes
   + factor-based analysis
 
-```{r collapse=TRUE}
+```{r}
 library(rentrez)
+library(tidyverse)
 
-search_year <- function(year, term){
-    query <- paste(term, "AND (", year, "[PDAT])")
-    entrez_search(db="pubmed", term=query, retmax=0)$count
-}
-
-year <- 2008:2019
-papers <- sapply(year, search_year, term="batch effect", USE.NAMES=FALSE)
-
-plot(year, papers, type='b', main="The Rise of Batch Effect")
+res <- tibble(year = 1990:2018)%>%
+  mutate(
+    PCount = map_int(
+      year,
+      function(x){
+        entrez_search(db = 'pubmed',term = paste('batch effect [WORD] AND', x))$count
+      }
+    )
+  )%>%
+  ggplot(
+    aes(x = year, y = PCount)
+  )+
+  geom_line()+
+  xlab('1990-2000')+
+  ylab('Publication Number')
 
 ```
 
@@ -46,15 +53,15 @@ plot(year, papers, type='b', main="The Rise of Batch Effect")
 - minimum: 3/group
 - sample size calculator:
 
-|Name             | Link                                              | Description                                  |
+|Name             |Publication                                        |Description                                   |
 |:---------------:|:-------------------------------------------------:|:--------------------------------------------:|
-|RnaSeqSampleSize | https://www.ncbi.nlm.nih.gov/pubmed/29843589      | Bioconductor package and a Shiny application |
+|RnaSeqSampleSize |https://www.ncbi.nlm.nih.gov/pubmed/29843589       |Bioconductor package and a Shiny application  |
+|RNAseqPS         |https://www.ncbi.nlm.nih.gov/pubmed/25374457       |
+|RNASeqPower      |https://www.ncbi.nlm.nih.gov/pubmed/23961961       | 
+|Scotty           |https://www.ncbi.nlm.nih.gov/pubmed/23314327       |
 
-  + https://www.ncbi.nlm.nih.gov/pubmed/25374457
-  + https://www.ncbi.nlm.nih.gov/pubmed/23961961
-  + https://www.ncbi.nlm.nih.gov/pubmed/23314327
 - recommended sample sizes vary from tool to tool https://www.ncbi.nlm.nih.gov/pubmed/28100468
-- "Another issue with sample size calculators is that it might not be obvious how to precisely define the outcome: do we want to find as many DE genes as possible? Do we want a certain power for the lowly expressed genes or the highly expressed ones? In many cases, RNA­seq experiments are exploratory and thus a means to further experimentation."
+- "Another issue with sample size calculators is that it might not be obvious how to precisely define the outcome: do we want to find as many DE genes as possible? Do we want a certain power for the lowly expressed genes or the highly expressed ones? In many cases, RNAï¿½seq experiments are exploratory and thus a means to further experimentation."
 
 - "more than 80% of reads are attributed to the 10% most expressed genes"
 - compare multiple tools on big dataset: edgeR and DEseq2 is the best when we use smaller sample size (<12), but at big dample number DEseq is the best: https://www.ncbi.nlm.nih.gov/pubmed/27022035
