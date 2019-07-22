@@ -17,3 +17,27 @@ y
 ```{r}
 x + y
 ```
+
+
+## Install packages: 
+
+1. CRAN
+```{r eval = F}
+utils::install.packages('tidyverse')
+```
+
+2. Bioconductor
+```{r eval = F}
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install('biomaRt')
+```
+
+3. GitHub
+```{r eval = F}
+if(!requireNamespace('devtools', quietly = TRUE))
+   install.packages('devtools')
+
+devtools::install_github("Displayr/flipPlots")
+```
