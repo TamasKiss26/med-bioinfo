@@ -20,6 +20,7 @@ x + y
 
 
 ## Install packages: 
+- https://journal.r-project.org/archive/2018/RJ-2018-058/index.html
 
 1. CRAN
 ```{r eval = F}
