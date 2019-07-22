@@ -1,11 +1,22 @@
 # Medical research in the 21st century
 
+- biology was a science with sparse, often only qualitative data
+- now: quantitative data production ~ high energy physics or astronomy but more heterogeneous and complex
+
+"Heterogeneous data are all alike; all heterogeneous data are heterogeneous in their own way." The Anna Karenina priciple
+
 ```{r setup, include = FALSE}
 library(rentrez)
 ```
 
-### Historicly: 
-couple of experimental datapoints, small literature
+## History
+- couple of experimental datapoints, small literature
+- hypothesis testing paradigm by R.A. Fisher (1930s)
+- iterative approach by Tukey (1977)
+- "large p, small n problem": small data point but many features, example: gene expression data set for 10 patients (n = 10) but 20.000 gens (p = 20.000)
+
+
+
 
 ## High-throughput technologies in biology
 - include a diagram of pubmed publication increase over time
