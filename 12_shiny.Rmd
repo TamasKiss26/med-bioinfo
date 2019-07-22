@@ -1,0 +1,17 @@
+# Shiny
+
+- interesting link: http://www.copafs.org/UserFiles/file/2018FCSM/H-2Wong.pdf?mkt_tok=eyJpIjoiT1dKa1lUWTBaalZtT1RjdyIsInQiOiJ0SWRyZDVuZFVFQ1NcL2RERUVpakdVNFJrRE5jQjNudjdUakNFc1Ztb1pxeUxjbkF3U3NQU2dGYTV1UnBhQXQrSzN6XC9LY0xveGV0NWVkOEZvOE5QeGhEcmp6M3lkNHc5VmQ2Mk9vWVQ3dmtyR25pREtXNWZkTU5WOVRXWWQ3a3ltIn0%3D
+
+- FDA statement: https://www.fda.gov/media/109552/download
+- FDA shiny apps: https://open.fda.gov
+
+1. Identify existing processes for streamlining!
+2. Develope standardized tools for higher efficiency and productivity!
+3. Communicate and share information with colleagues in different disciplines!
+
+## Structure:
+- ui.R + server.R or app.R
+- opptional: HTTP5, CSS3, JS
+
+## Sharing Shiny apps:
+- deploy on a server, deploy with Rstudio service
