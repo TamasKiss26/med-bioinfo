@@ -14,5 +14,8 @@
 ## mRNA-seq, excelent description:
 - https://peerj.com/preprints/27283/
 
-##data set to teach data science:
+## data set to teach data science:
 - https://simplystatistics.org/2019/07/19/more-datasets-for-teaching-data-science-the-expanded-dslabs-package/
+
+## learn more: 
+- https://www.datacamp.com/community/podcast data science podcast

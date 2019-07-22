@@ -11,16 +11,21 @@ bioinformatics teaching materials for medical students
 - introduction to R and Bioconductor
 - introduction to BASH
 - introduction to Git and GitHub
+- data types (in biology)
 - tidyverse
+- databases
 - annotation hub
 - eSet
-- accessing online databases
 
 ### staistical, mathematical and computational methodes:
+- probabiluty
+- linear algebra
 - statistical modelling
 - clustering
 - hypothesis testing
-- multivariate analysis
+- multivariate statistics
+- simulation (Monte Carlo approximation)
+- Bayesian methodes
 
 ### storrytelling:
 - experimental designe
