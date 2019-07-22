@@ -1,0 +1,38 @@
+# R
+
+R is a language and environment for statistical computing and graphics. It is a free software. It was created by Ross Ihaka and Robert Gentleman at the University of Auckland, New Zeland. It is widely used. 
+
+"R is a language and environment for statistical computing and graphics. It is a GNU project and is similar to the S language and environment that was developed at Bell Laboratories (formerly AT&T, now Lucent Technologies) by John Chambers and his colleagues. R can be considered as a distinct implementation of S, developed separately from the original implementation at Bell Laboratories. Although there are some important differences between these two implementations, much code written for S runs unaltered under R."
+
+license: Free Software Foundation’s GNU General Public License
+
+- release cycle
+
+R in Medicine
+R in Pharma
+R in Finance
+
+**Advantages:**
+
+1. R is free and open
+2. R is extensible and programmable
+3. R has thousends of high quality packages
+
+**Disadvantages:**
+
+1. ~~R is free and open~~ -> R is an investment
+2. ~~R is extensible and programmable~~ -> R needs to be programmed
+3. ~~R has thousends of high quality packages~~ -> R has too many packages
+
+- R Development Core Team
+- R project website: https://www.r-project.org
+- Bioconductor project website: https://bioconductor.org
+
+## R-studio IDE
+- link to the official website: https://www.rstudio.com
+- link to install: https://www.rstudio.com/products/rstudio/download/ 
+
+## Open philosofy:
+- open communication
+- open code, documentation
+- open contribution
