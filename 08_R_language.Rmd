@@ -42,3 +42,14 @@ if(!requireNamespace('devtools', quietly = TRUE))
 
 devtools::install_github("Displayr/flipPlots")
 ```
+
+## Find packages: 
+- sos package
+```{r eval = F}
+install.packages('sos')
+library(sos)
+```
+
+
+
+
