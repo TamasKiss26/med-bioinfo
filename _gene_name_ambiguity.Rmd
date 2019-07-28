@@ -65,6 +65,14 @@ notUnique <- res%>%
 notUnique
 ```
 
+### 6. Not translated
+```{r}
+df[!(df$Gene %in% res$external_gene_name),]
+
+df%>%
+  filter(Gene == unique(res$external_gene_name))
+```
+
 ### 6. Session info
 ```{r}
 sessionInfo()
