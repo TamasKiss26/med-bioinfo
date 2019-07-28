@@ -1,0 +1,71 @@
+---
+title: 'Gene ID ambiguity'
+autrhor: 'Tamas Kiss'
+output:
+  html_document:
+    theme: readable
+    toc: true
+    toc_float: true
+    highlight: pygments
+    df_print: paged
+---
+
+### 1. Packages
+```{r message = F}
+library(tidyverse)
+library(biomaRt)
+library(readxl)
+```
+
+### 2. BioMart connection
+```{r}
+mart <- useEnsembl(
+  biomart = 'ensembl',
+  dataset = 'mmusculus_gene_ensembl',
+  mirror = 'useast'
+)
+```
+
+### 3. Input data
+```{r}
+# run
+df <- read_excel('./data/DESeq2_Aged_Young.xlsx', sheet = 1)
+
+# result
+df
+```
+
+### 4. Search
+```{r cache = T}
+# run
+res <- getBM(
+  attributes = 
+    c('external_gene_name', 
+      'ensembl_gene_id'),
+  filters = 'external_gene_name',
+  values = df%>%pull('Gene'),
+  mart = mart
+)
+
+# result
+res
+```
+
+### 5. Duplicates
+```{r}
+# run
+notUnique <- res%>%
+  group_by(external_gene_name)%>%
+  mutate(ensenblALL = paste0(ensembl_gene_id, collapse = ', '))%>%
+  count(external_gene_name, ensenblALL)%>%
+  filter(n > 1)%>%
+  arrange(desc(n))
+
+# result
+notUnique
+```
+
+### 6. Session info
+```{r}
+sessionInfo()
+```
