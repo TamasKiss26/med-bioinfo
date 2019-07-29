@@ -1,25 +1,80 @@
 # R language
 
-### Assignement
-
+#### R as a calculator
 ```{r}
-x <- 5
-y <- 10
+1 + 1
 ```
 
 ```{r}
+1/2
+```
+
+```{r}
+log(2)
+```
+
+```{r}
+log(2, base = 10)
+```
+
+#### Get help
+```{r}
+?log
+```
+
+#### Error massage
+```{r error = T}
+log('a')
+```
+
+```{r error = T}
+temperature F <- 100
+```
+
+#### Logical operations
+```{r}
+1 == 2
+```
+
+```{r}
+1 != 2
+```
+
+```{r}
+1 > 2
+```
+
+```{r}
+2 >= 2
+```
+
+#### Assignement
+```{r}
+x <- 5
+y <- 10
 x
 y
 ```
 
-### Basic operations
-
 ```{r}
-x + y
+(x <- 1/2)
+log(x)
 ```
 
+#### Vectors and vectorised operations
+```{r}
+a <- c(1, 2, 3)
+b <- c(1:5)
+a
+b
+```
 
-## Install packages: 
+```{r}
+(a1 <- a + 1)
+a1
+```
+
+#### Install packages: 
 - https://journal.r-project.org/archive/2018/RJ-2018-058/index.html
 
 1. CRAN
@@ -43,13 +98,18 @@ if(!requireNamespace('devtools', quietly = TRUE))
 devtools::install_github("Displayr/flipPlots")
 ```
 
-## Find packages: 
+#### Find packages: 
 - sos package
 ```{r eval = F}
 install.packages('sos')
 library(sos)
 ```
 
+#### Commenting
 
+```{r eval = F}
+#best package
+library(tidyverse)
+```
 
 
