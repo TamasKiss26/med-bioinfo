@@ -13,5 +13,20 @@
 - ui.R + server.R or app.R
 - opptional: HTTP5, CSS3, JS
 
-## Sharing Shiny apps:
+## UI design:
+- Who are the end users of the app?
+- How frequently will they use the app?
+- What level of complexity and personalization do the users really need?
+- What level of interactivity do you want, and to what extent is it central?
+- How important is it that the app is fast?
+
+## Sharing:
 - deploy on a server, deploy with Rstudio service
+
+## Security:
+- shinytest package from RStudio
+- shinyloadtest
+- Katalon Studio
+
+## App desig book: 
+- https://thinkr-open.github.io/building-shiny-apps-workflow/
