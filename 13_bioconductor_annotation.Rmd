@@ -1,0 +1,46 @@
+# Annotation
+## Bioconductor
+
+
+### Packages
+org. ....
+```{r eval = F}
+BiocManager::install('org.Mm.eg.db')
+
+library(org.Mm.eg.db)
+```
+
+### 1. Get key types
+```{r eval = F}
+keytypes(org.Mm.eg.db)
+```
+
+### 2. Select function
+- there are other select functions (dplyr), watch out!
+```{r eval = F}
+AnnotationDbi::select(
+  org.Mm.eg.db,
+  keys = df$ensembl_id,
+  columns = 'ENZYME',
+  keytype = 'ENSEMBL'
+)
+```
+
+
+### GO annotation example
+```{r eval = F}
+library(org.Mm.eg.db)
+library(readxl)
+
+df <- read_excel('./data/DESeq2_Aged_Young.xlsx')
+
+goannot <- AnnotationDbi::select(
+  org.Mm.eg.db,
+  keys = as.character(df_univ$Ensembl_ID),
+  columns = 'GO',
+  keytype = 'ENSEMBL'
+)
+```
+
+
+- advantage: offline  useable
