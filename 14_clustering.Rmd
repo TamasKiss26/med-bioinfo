@@ -45,4 +45,19 @@ Equal-distance contour plots:
 
 # Computations related to distacne in R
 
+dist() function in base R
+
+otions: euclidean, maximum, manhattan, camberra, binary, minkowski
+
+```{r}
+library(tidyverse)
+
+data("iris")
+iris%>% 
+  dplyr::select(1:4)%>%
+  dplyr::slice(1:8)%>%
+  scale()%>%
+  dist()
+
+```
 
