@@ -1,0 +1,48 @@
+# Clustering
+
+### Introduction
+
+Clustering takes data (continuous or quasi-continuous) and adds to them a new categorical group variable that can oftern simplify decision making, even if this sometimes comes at the cost of ignoring intermediate states.
+
+Clustering algorithms are designed to find clusters, so they will find clusters even where there are none.
+
+It is an unsupervised mothod. All variables has the same status. 
+
+Clustering related packages on Bioconductor:
+<https://www.bioconductor.org/packages/release/BiocViews.html#___Clustering>
+
+Steps of clustering:
+1. observation-by-features rectangular table
+2. choose an observation-to observation distance measure
+3. compute the distance matrix
+4. consturct the cluster eather by agglomerative or partitioning method
+
+### Distance
+
+How to measure similarity?
+
+First, choose the relevant features!
+
+Euclidean method: Euclidean distance between two points in a p-dimensional space is the square root of the sum of square of the difference in all p cordinate direcion.
+
+Manhattan method (The Manhattan, City Block, Taxicab): Sum of the absolute differences in all coordinates.
+
+Maximum method: The maximum of the absolute differences between cordinates.
+
+Weighted Euclidean distance: 
+
+Minkowski: Allowing the exponent to be m instead of 2, as in the Euclidean distance.
+
+Edit, Hamming methods: To compare character sequences like nucleotide or amino acid sequences.
+
+Binary:
+
+Jaccard distance: co-occurrance
+
+Corrlation-based ditance:
+
+Equal-distance contour plots: 
+
+# Computations related to distacne in R
+
+
