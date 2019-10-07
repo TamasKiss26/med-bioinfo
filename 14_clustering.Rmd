@@ -23,25 +23,27 @@ How to measure similarity?
 
 First, choose the relevant features!
 
-Euclidean method: Euclidean distance between two points in a p-dimensional space is the square root of the sum of square of the difference in all p cordinate direcion.
+1. Euclidean method: Euclidean distance between two points in a p-dimensional space is the square root of the sum of square of the difference in all p cordinate direcion.
 
-Manhattan method (The Manhattan, City Block, Taxicab): Sum of the absolute differences in all coordinates.
+2. Manhattan method (The Manhattan, City Block, Taxicab): Sum of the absolute differences in all coordinates.
 
-Maximum method: The maximum of the absolute differences between cordinates.
+3. Maximum method: The maximum of the absolute differences between cordinates.
 
-Weighted Euclidean distance: 
+4. Weighted Euclidean distance: 
 
-Minkowski: Allowing the exponent to be m instead of 2, as in the Euclidean distance.
+5. Minkowski: Allowing the exponent to be m instead of 2, as in the Euclidean distance.
 
-Edit, Hamming methods: To compare character sequences like nucleotide or amino acid sequences.
+6. Edit, Hamming methods: To compare character sequences like nucleotide or amino acid sequences.
 
-Binary:
+7. Binary:
 
-Jaccard distance: co-occurrance
+8. Jaccard distance: co-occurrance
 
-Corrlation-based ditance:
+9. Corrlation-based ditance:
 
-Equal-distance contour plots: 
+Distaces can be computed between any pairs of objects, nut just points in Rp or character sequences. For exapmle the shortest.paths() function (igraph) computes the distance between vertices on a graph, and the function cophenetic computes the distance between leaves of a tree.
+
+Equal-distance contour plots?
 
 # Computations related to distacne in R
 
@@ -59,5 +61,48 @@ iris%>%
   scale()%>%
   dist()
 
+
+
 ```
+
+```{r}
+
+iris%>%
+  dplyr::select(1:4)%>%
+  dplyr::slice(1:8)%>%
+  scale()%>%
+  dist(method = 'manhattan')
+
+```
+
+Graph-based clustering: single-cell mRNA-sequencing
+
+### k-methodes: k-means, k-medoids and PAM
+
+PAM: partitioning around medioids
+
+partitioning or iterative relocation methodes
+
+steps of the PAM method:
+1. take a matrix of p features measured on a set of n observations
+2. randomly pick k distinct cluster centers out of the n observations ('seeds')
+3. assign each of the remaining observation to the group to whose center is the closest
+4. choose a new center from the observation in the group, such that the sum of the distance of group members to the center is minimal, this is called the medoid
+5. repeat step 3 and 4 until the groups stabilize
+
+k-means is different from the PAM in the sep 4. The medoid is replaced by the arithmetic means.
+
+Most common off-the-shelf methodes. 
+better on: convex, comparable size clusters
+different size: biger will be broken up!!
+
+### Resampling
+
+package clusterExperiment: good to scRNA-seq
+
+
+
+Challenges in unsupervised clustering of single-cell RNA-seq data PMID: 30617341
+
+
 
