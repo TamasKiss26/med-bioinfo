@@ -104,5 +104,7 @@ package clusterExperiment: good to scRNA-seq
 
 Challenges in unsupervised clustering of single-cell RNA-seq data PMID: 30617341
 
+community-detection-based algorithms
+
 
 
