@@ -36,3 +36,27 @@ R in Finance
 - open communication
 - open code, documentation
 - open contribution
+
+
+### R vs Bioconductor:
+- R is a general-purpose programing language for statistical computing and visualization.
+
+- Bioconductor uses R data structures, methodes and packages for bioinformatics.
+
+- R is a decentralized, open-source project.
+
+- Bioconductor is lead by a Core Team of full-time developes.
+
+- R provides methodes primarily acting on generic data structures like numeric, matrix, data.frame, and 'tidyverse' alternatives like tibble.
+
+- Bioconductor provides methodes primarily acting on integrative data structure for -omics, like GRanges and SummarizedExperiment.
+
+- R is enhanced by the CRAN ecosystem of > 10K add-packages spannning all areas of science, economics, computing, etc..
+
+- Bioconductor: an ecosystem of > 1.200 add-on packages.
+
+- R: CRAN enforces basic package requirements of man pages, and clean machine checks.
+
+- Bioconductor enforces additional packages requirements of vignettes, re-use of core Bioconductor data structures, unit tests.
+
+- Bioconductor development is supported by several EC and NIH grants.
