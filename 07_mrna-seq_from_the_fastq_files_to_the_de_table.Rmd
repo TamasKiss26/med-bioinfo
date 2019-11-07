@@ -1,11 +1,26 @@
 # mRNA-seq: from the FASTQ files to the DE table
 
 Standard workflow, how to perform your first mRNA-seq experimnet
-Let`s emphasize why we use these tools and not the others!
 -https://www.ncbi.nlm.nih.gov/pubmed/29267363 
 
 ## FASTQ file quality test
-- ShortReads pakage: https://www.ncbi.nlm.nih.gov/pubmed/19654119
+- FASTQ format: 
+  - text-based format
+  - stores biological sequences (nucleotide sequence) and its corresponding quality score
+  - previously: FASTA format
+  - original developer: Wellcom Trust Sanger Institute
+  - encoded with a single ASCII characters
+
+```{r}
+library(ShortRead)
+library(Biostrings)
+
+fq <- FastqSampler('./data/FASTQ_sample_1.fastq.gz', 10)
+
+#head(sread(fq), 3)
+#encoding(quality(fq))
+```
+- ShortRead pakage: https://www.ncbi.nlm.nih.gov/pubmed/19654119
 
 ## adapter trimming:
 - http://www.usadellab.org/cms/?page=trimmomatic -trimmomatic
@@ -26,6 +41,15 @@ Let`s emphasize why we use these tools and not the others!
 - https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8 -algorithm
 - https://liorpachter.wordpress.com/2017/08/02/how-not-to-perform-a-differential-expression-analysis-or-science/
 - interesting blog post: https://en.wikipedia.org/wiki/Negative_binomial_distribution -negative binomial distribution
+- Robust regression: https://en.wikipedia.org/wiki/Robust_regression 
+- Robust regression: Regression analysis seeks to find the relationship between one or more independent variables and a dependent variable. Certain widely used methods of regression, such as ordinary least squares, have favourable properties if their underlying assumptions are true, but can give misleading results if those assumptions are not true. Least squares estimates for regression models are highly sensitive to outliers. (in DESeq2: estimateSizeFactorsForMatix)
+
+```{r}
+
+
+```
+
+Heteroscedastic errors: The data have a large dynamic range, starting from zero up to millions. The variance and, more generally, the distribution shape of the data in different parts of the dynamic range are very different. We need to take this phenomenon, called heteroscedasticity, into account.
 
 
 - https://www.ncbi.nlm.nih.gov/pubmed/29040385 alternative splicing workflow banchmarking MAYBE SOMEWHERE ELSE!!!
