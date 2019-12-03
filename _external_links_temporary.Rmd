@@ -19,3 +19,7 @@
 
 ## learn more: 
 - https://www.datacamp.com/community/podcast data science podcast
+
+## factors:
+- paper: https://peerj.com/preprints/3163/
+- presentation: https://www.youtube.com/watch?v=uLcd6tRTUEY
